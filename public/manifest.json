@@ -1,0 +1,24 @@
+{
+   "manifest_version": 3,
+   "name": "Notion Bookmarks",
+   "short_name": "notion-bookmark",
+   "version": "1.0.0",
+   "description": "Store Links to Notion",
+   "icons": {
+     "16": "icon.png",
+     "32": "icon.png",
+     "64": "icon.png",
+     "128": "icon.png"
+   },
+   "permissions": ["activeTab"],
+   "content_scripts": [
+     {
+       "matches": ["https://*/*", "http://*/*"],
+       "js": ["inject.js"]
+     }
+   ],
+   "host_permissions": ["<all_urls>"],
+   "chrome_url_overrides": {
+    "newtab": "index.html"
+  }
+ }
