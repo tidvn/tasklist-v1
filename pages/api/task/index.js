@@ -10,7 +10,7 @@ const collection = db.collection("Todos")
             const result = await collection
                 .find({})
                 .sort({ metacritic: -1 })
-                .limit(10)
+                .limit(1000)
                 .toArray();
 
                 res.status(201).json({ success: true, data: result })
